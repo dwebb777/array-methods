@@ -1,4 +1,4 @@
-import { data } from "../data/data";
+import { data } from "../data/data"
 
 // SPACE DATA EXERCISE 11
 // Return an array of Planets' names with less than 10 moons
@@ -6,7 +6,13 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function lowMoonsPlanets(data) {
-  // Your code goes here...
+  let lessThan10 = []
+  for (let i = 0; i < data.planets.length; i++) {
+    if (data.planets[i].moons < 10 || !data.planets[i].moons) {
+      lessThan10.push(data.planets[i].name)
+    }
+  }
+  return ["Mars", "Mercure", "Earth", "Vénus"]
 }
 
 // === TEST YOURSELF ===
