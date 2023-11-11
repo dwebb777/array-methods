@@ -1,14 +1,16 @@
-import { data } from "../data/data";
+import { data } from "../data/data"
 
 // SPACE DATA EXERCISE 10
 // Return a given asteroid object of data
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
 export function getAsteroidDataByName(data, asteroidName) {
-  // Your code goes here...
+  for (let i = 0; i < data.asteroids.length; i++) {
+    if (data.asteroids[i].name == asteroidName) {
+      return data.asteroids[i]
+    }
+  }
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
