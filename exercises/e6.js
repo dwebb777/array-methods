@@ -1,14 +1,18 @@
-import { data } from "../data/data";
+import { data } from "../data/data"
 
 // SPACE DATA EXERCISE 6
 // Return an array with all asteroids names discovered after a given year
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getAsteroidsDiscoveredAfterYear(data, year) {
-  // Your code goes here...
+  let discovered = []
+  for (let i = 0; i < data.asteroids.length; i++) {
+    if (data.asteroids[i].discoveryYear > year) {
+      discovered.push(data.asteroids[i].name)
+    }
+  }
+  return discovered
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-6"
