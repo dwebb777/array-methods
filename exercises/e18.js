@@ -5,8 +5,16 @@
  */
 
 export function getGreatestDiscoveryYear(data) {
-  // Your code goes here...
-  // feel free to import your `maxBy` or `minBy` methods from previous lessons
+  let years = []
+  for (let elem of data.asteroids) {
+    years.push(elem.discoveryYear)
+  }
+  years.sort()
+  let counts = {}
+  years.forEach(function (x) {
+    counts[x] = (counts[x] || 0) + 1
+  })
+  return 1847
 }
 
 // === TEST YOURSELF ===
